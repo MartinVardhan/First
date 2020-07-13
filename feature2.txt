@@ -1,1 +1,3 @@
 This is a feature2 file
+Added New Feature2 line 1
+Added New Feature2 line 2
