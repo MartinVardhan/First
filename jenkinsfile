@@ -13,6 +13,9 @@ pipeline{
     }
     failure{
       emailext body: 'This is a Sample failure test Mail', subject: 'Test Mail', to: 'piduguvardhan@gmail.com'
+    }
+    always{
+	  emailext body: 'Sample Java Program completed!!!', subject: 'Test Mail', to: 'piduguvardhan@gmail.com'
     }  	
   }
 }
