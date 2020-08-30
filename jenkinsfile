@@ -9,13 +9,13 @@ pipeline{
   }
   post{
     success{
-      emailext body: 'This is a Sample success test Mail', subject: 'Test Mail', to: 'piduguvardhan@gmail.com'
+      emailext body: 'This is a Sample success test Mail', subject: 'Test Mail', to: 'success@gmail.com'
     }
     failure{
-      emailext body: 'This is a Sample failure test Mail', subject: 'Test Mail', to: 'piduguvardhan@gmail.com'
+      emailext body: 'This is a Sample failure test Mail', subject: 'Test Mail', to: 'failure@gmail.com'
     }
     always{
-	  emailext body: 'Sample Java Program completed!!!', subject: 'Test Mail', to: 'piduguvardhan@gmail.com'
+	  emailext body: 'Sample Java Program completed!!!', subject: 'Test Mail', to: 'always@gmail.com'
     }  	
   }
 }
