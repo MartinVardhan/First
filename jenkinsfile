@@ -2,6 +2,11 @@ pipeline{
   agent any
   stages{
     stage('build'){
+      when{
+        expression{
+          BRANCH_NAME == 'master'
+        }
+      }
       steps{
         build propagate: false, job: 'sample java program'
       }
