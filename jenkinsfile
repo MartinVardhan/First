@@ -2,7 +2,6 @@ pipeline{
   agent any
   stages{
     stage('build'){      
-      }
       steps{
         build propagate: false, job: 'sample java program'
       }
