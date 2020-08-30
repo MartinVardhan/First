@@ -3,8 +3,7 @@ pipeline{
   stages{
     stage('build'){
       steps{
-        javac Sample.java
-        java Sample
+        build propagate: false, job: 'sample java program'
       }
     }
   }
