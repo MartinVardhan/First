@@ -3,9 +3,16 @@ pipeline{
   stages{
     stage('build'){      
       steps{
-        build propagate: false, job: 'sample java program'
-        emailext body: 'This is a Sample test Mail', subject: 'Test Mail', to: 'piduguvardhan@gmail.com'
+        build propagate: false, job: 'sample java program'        
       }
     }
+  }
+  post{
+    success{
+      emailext body: 'This is a Sample success test Mail', subject: 'Test Mail', to: 'piduguvardhan@gmail.com'
+    }
+    failure{
+      emailext body: 'This is a Sample failure test Mail', subject: 'Test Mail', to: 'piduguvardhan@gmail.com'
+    }  	
   }
 }
